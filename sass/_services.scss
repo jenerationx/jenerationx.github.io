@@ -1,0 +1,38 @@
+@import "variables";
+#services{
+  ul{
+    margin-bottom: 0;
+  }
+  .service-item{
+    background-color: #ffffff;
+    padding: 20px 20px 30px 20px;
+    i{
+      font-size: 70px;
+      color: $primary-color;
+    }
+    h6{
+      margin: 0;
+      line-height: 1.4;
+      font-size: 1.25em;
+      font-weight: $font-weight-normal;
+      color: $font-color-dark;
+      padding-bottom: 20px;
+    }
+    p{
+      color: $font-color-dark;
+    }
+  }
+
+  li:nth-child(even){
+    .service-item{
+      background-color: $primary-color;
+      color: #ffffff;
+      i{
+        color: #ffffff;
+      }
+      h6, p{
+        color: #ffffff;
+      }
+    }
+  }
+}

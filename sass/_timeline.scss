@@ -1,0 +1,160 @@
+@import "variables";
+
+/*---------------TIMELINE - EXPERIENCE AND EDUCATION TIMELINE-------------------*/
+.timeline {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  height: 90%;
+  width: 2px;
+  background: $accent-color;
+  left: 0px;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.timeline li {
+  background: #ffffff;
+  position: relative;
+  left: 25px;
+  width: 95%;
+  margin-bottom: 20px;
+  i{
+    font-size: 25px;
+    color: $accent-color;
+    position: absolute;
+    top: -11px;
+    left: -46px;
+  }
+}
+
+.timeline li:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 1em solid $primary-color;
+  border-left: 1em solid transparent;
+  position: absolute;
+  left: -1em;
+  top: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .timeline li {
+    width: 92%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .timeline:before {
+    left: 50%;
+  }
+
+  .timeline ul {
+    padding-left: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .timeline li {
+    left: 0;
+    width: 43%;
+  }
+
+  /* Right Side */
+  .timeline li:nth-child(even) {
+    float: right;
+    margin-top: 70px;
+  }
+
+  .timeline li:nth-child(even):before{
+    border-top: 2em solid $primary-color;
+    border-left: 2em solid transparent;
+    position: absolute;
+    left: -2em;
+    top: 0;
+  }
+
+  .timeline li:nth-child(even) i{
+    position: absolute;
+    left: -18.25%;
+  }
+
+
+
+  /* Left Side */
+  .timeline li:nth-child(odd) {
+    float: left;
+  }
+
+  .timeline li:nth-child(odd):before {
+    border-top: 2em solid $primary-color;
+    border-right: 2em solid transparent;
+    right: -2em;
+    left: auto;
+  }
+
+  .timeline li:nth-child(odd) i{
+    position: absolute;
+    left: 114.25%;
+  }
+
+
+  .timeline li:nth-of-type(2n+1) {
+    clear: both;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1001px) {
+  .timeline li:nth-child(even) i{
+    position: absolute;
+    left: -19%;
+  }
+
+  .timeline li:nth-child(odd) i{
+    position: absolute;
+    left: 113%;
+  }
+}
+
+.timeline-content{
+  .timeline-header {
+    width: 100%;
+    height: auto;
+    background-color: $primary-color;
+    float: left;
+    margin-bottom: 20px;
+  }
+  h3 {
+    padding: 0 20px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: $font-weight-normal;
+    background-color: $primary-color;
+  }
+  .sub-heading{
+    text-decoration: none;
+    color: $primary-color;
+    padding: 0 20px;
+    line-height: 1.2;
+    font-weight: $font-weight-normal;
+  }
+
+  .content-p {
+    padding: 10px 20px 20px 20px;
+    font-weight: $font-weight-light;
+  }
+}
+

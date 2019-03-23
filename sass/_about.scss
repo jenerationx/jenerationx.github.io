@@ -1,0 +1,75 @@
+@import "variables";
+
+/*---------------ABOUT-------------------*/
+#about{
+  position: relative;
+  padding-top: 0;
+  margin-top: 10px;
+  height: auto;
+  background-color: transparent;
+
+  #profile{
+
+    animation-delay: 500ms;
+    animation-duration: 1000ms;
+
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -97px;
+    left: 50%;
+    margin-left: -90px;
+    z-index: 1;
+    display: block;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    img{
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+    }
+  }
+
+  #intro-div{
+    padding: 30px 0;
+
+    ul{
+      padding: 0 5px;
+      margin-top: 85px;
+
+      li{
+        a{
+          i{
+            font-size: 25px;
+            color: $primary-color;
+            opacity: .5;
+            margin: 0 5px;
+            &:hover{
+              color: $primary-color;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    p{
+      padding: 0 5%;
+      margin: 32px 0;
+    }
+
+    .btn{
+      width: 180px;
+      height: auto;
+      margin: 10px 10px;
+    }
+
+  }
+
+}
+
+
+
+

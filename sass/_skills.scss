@@ -1,0 +1,46 @@
+@import "variables";
+
+/*---------------SKILLS-------------------*/
+.skill{
+  padding: 20px 20px;
+  color: #ffffff;
+}
+.skill-title{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.skill-wrapper{
+  background-color: $primary-color;
+  color: #ffffff;
+}
+.skill-progress-div {
+  margin-bottom: 22px;
+  p {
+    color: #ffffff;
+    span{
+      float: right;
+    }
+  }
+}
+
+.skill-progress{
+  position: relative;
+  background-color: $primary-color-dark;
+  margin: 15px 0;
+  height: 3px;
+  z-index: 0;
+  overflow: visible;
+}
+
+.skill-determinate{
+  position: absolute;
+  height: 3px;
+  background-color: #ffffff;
+  .skill-determinate-circle{
+    position: absolute;
+    right: 0%;
+    top: -7px;
+    color: #ffffff;
+    font-size: 18px;
+  }
+}

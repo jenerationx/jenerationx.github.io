@@ -1,0 +1,77 @@
+@import "variables";
+
+/*---------------PRICING TABLE-------------------*/
+#pricing{
+  .period-btn{
+    li{
+      color: $primary-color;
+      cursor: pointer;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 10px 10px;
+      a{
+        color: $primary-color;
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+}
+
+.period-type{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+
+  .pricing-table{
+    margin: 0;
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    color: $font-color-dark;
+    padding: 30px 30px;
+    &:hover {
+      box-shadow: $hover-box-shadow;
+    }
+    h3{
+      margin: 0;
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: $font-weight-medium;
+      color: $primary-color;
+    }
+    h4{
+      margin: 30px 0;
+    }
+    .dollar{
+      font-size: .7em;
+      font-weight: $font-weight-light;
+      vertical-align: top;
+      position: relative;
+      bottom: 6px;
+    }
+    .amount{
+      font-weight: $font-weight-medium;
+      vertical-align: middle;
+      font-size: 1.6em;
+    }
+    .period{
+      font-size: .7em;
+      font-weight: $font-weight-light;
+      vertical-align: bottom;
+      position: relative;
+      top: 9px;
+    }
+    ul{
+      margin-bottom: 30px;
+      li{
+        line-height: 2.5;
+        font-weight: $font-weight-light;
+        border-top: 1px solid $divider-color;
+      }
+      li:nth-child(1){
+        border-top: none;
+      }
+    }
+  }
+}

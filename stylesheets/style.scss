@@ -1,0 +1,247 @@
+/*-------------------------------------
+[Master Stylesheet]
+Project:	    Decent Material CV | Resume
+Author:         Mohammad Asif
+Theme URI:      http://demo.ravelweb.com/material-cv
+Description:    The All in One Material CV | Resume Template
+Version:	    2.0
+----------------------------------------*/
+/*--------------------------------------
+          TABLE OF CONTENTS
+----------------------------------------
+    1. STYLESHEET
+        1.1. BODY
+        1.2. TYPOGRAPHY
+        1.3. COMPONENT
+    2. PAGE LOADER
+    3. SECTION STRUCTURE
+    4. CONTAINER STRUCTURE
+    5. HEADER
+        5.1. NAV
+        5.2. SIDE NAV
+    6. ABOUT
+        6.1. PROFILE
+        6.2. INTRO
+        6.3. BUTTON (CV DOWNLOAD & CONTACT)
+    7. TIMELINE - EXPERIENCE AND EDUCATION TIMELINE
+        7.1. HEADING
+        7.2. SUMMERY
+    8. SKILLS
+        8.1. SKILL HEADLINE
+        8.2. SKILL PROGRESS
+    9. SERVICES
+        9.1. SERVICE ICON
+        9.2. SERVICES TITLE
+        9.3. SERVICES INFO
+    10. PORTFOLIO
+        10.1. FILTER OPTIONS
+        10.2. FILTER CONTAINER
+            10.2.1. PORTFOLIO
+            10.2.2. PORTFOLIO IMAGE
+            10.2.3. PORTFOLIO TITLE
+        10.3. MODAL
+            10.3.1. MODAL IMAGE
+            10.3.2. LIVE DEMO BUTTON
+            10.3.3. MODAL CONTENT
+    11. ACHIEVEMENT
+        11.1. ACHIEVEMENT HEADING
+        11.2. ACHIEVEMENT ICON & DATE
+        11.3. ACHIEVEMENT CONTENT
+    12. PUBLICATIONS
+        12.1. ICON
+        12.2. TITLE
+        12.3. INFO
+        12.4. READ BUTTON
+    13. BLOG
+        13.1. BLOG IMAGE
+        13.2. BLOG TITLE
+        13.3. TIME AND FAVORITE
+        13.4. READ MORE BUTTON
+        13.5. BLOG ARTICLE DEMO
+        13.5. VISIT BLOG BUTTON
+    14. CLIENTS
+        14.1.  CLIENTS SLIDER
+            14.1.1.  CLIENTS REFERENCE
+        14.3.  CLIENTS LOGO
+    15. PRICING TABLE
+        15.1. MONTHLY AND YEARLY BUTTON
+        15.2. MONTHLY AND YEARLY PRICING
+    16. INTEREST
+        16.1. INTEREST CONTENT
+        16.1. INTEREST ICON & NAME
+    17. CONTACT
+        17.1. INFORMATION
+        17.2. CONTACT FORM
+        17.3. LOCATION MAP
+    18. FULL BLOG
+        18.1. BLOG HEADER
+        18.2. BLOG PAGE
+            18.2.1. POST WRAPPER
+                  18.2.1.1. BLOG POST ITEM
+                  18.2.1.1. PAGINATION
+            18.2.1. BLOG SIDEBAR
+                18.2.1.1. SEARCH
+                18.2.1.2. CATEGORY
+                18.2.1.3. RECENT POST
+                18.2.1.4. POPULAR POST
+                18.2.1.5. POPULAR POST
+                18.2.1.6. ABOUT AUTHOR
+                18.2.1.7. FOLLOW
+    19. SINGLE POST
+        19.1. POST WRAPPER
+              19.1.1. FULL POST
+              19.1.2. COMMENT BOX
+              19.1.3. POSTED COMMENT
+    20. FOOTER
+----------------------------------------*/
+
+@import "../sass/variables";
+
+/*---------------BODY-------------------*/
+html, body{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  background-color: $body-color;
+  color: $font-color-dark;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+}
+
+/*-------------TYPOGRAPHY----------------*/
+h1, h2, h3, h4, h5, h6, p, a, li{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: $font-weight-medium;  }
+
+p, a, li{
+  font-weight: $font-weight-normal;  }
+
+h4{
+  font-size: 2em;  }
+
+h6{
+  font-size: 1.4em;  }
+
+p, blockquote{
+  color: $p-color;
+  font-weight: $font-weight-light;
+}
+
+/*---------------COMPONENTS--------------*/
+.shadow{
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+a {
+  color: $accent-color;
+  &:hover, &:active, &:focus {
+    color: $accent-color-light;
+    text-decoration: none;
+    outline:0;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+  .swiper-slide{
+    padding-bottom: 35px;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    bottom: 0;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: 0.2;
+    margin-top: 20px;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: $primary-color;
+  }
+}
+
+.active-cat{
+  color: #ffffff;
+  border-bottom: 2px solid $accent-color;
+}
+
+.custom-btn {
+  background-color: $accent-color !important;
+  &:hover {
+    color: #fff;
+    outline:0;
+    background-color: $accent-color-dark !important;
+  }
+  &:focus {
+    color: #fff;
+    outline:0;
+    background-color: $accent-color !important;
+  }
+  &:active {
+    color: #fff;
+    outline:0;
+    background-color: $accent-color !important;
+    &:hover {
+      color: #fff;
+      outline:0;
+      background-color: $accent-color !important;
+    }
+    &:focus {
+      color: #fff;
+      outline:0;
+      background-color: $accent-color !important;
+    }
+  }
+}
+
+.back-to-top {
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: $card-box-shadow;
+  &.back-to-top-is-visible{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+@import "../sass/page-preloader";
+@import "../sass/section";
+@import "../sass/container";
+@import "../sass/header";
+@import "../sass/about";
+@import "../sass/timeline";
+@import "../sass/skills";
+@import "../sass/services";
+@import "../sass/portfolio";
+@import "../sass/modal";
+@import "../sass/achievement";
+@import "../sass/publications";
+@import "../sass/blog";
+@import "../sass/clients";
+@import "../sass/pricing";
+@import "../sass/interest";
+@import "../sass/contact";
+@import "../sass/inputs";
+@import "../sass/footer";
+@import "../sass/blog-page";
+@import "../sass/post";

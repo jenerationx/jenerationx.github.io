@@ -1,0 +1,194 @@
+@import "variables";
+
+/*---------------CONTACT-------------------*/
+
+/*---------------INFORMATION-------------------*/
+
+.info{
+  width: 100%;
+  background-color: $primary-color;
+  min-height: 480px;
+  height: auto;
+  ul{
+    padding: 30px 20px;
+    display: block;
+    li{
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      display: block;
+      color:#ffffff;
+      font-size: 1em;
+      font-weight: $font-weight-light;
+      display: block;
+      i{
+        color: #ffffff;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+/*---------------CONTACT FORM-------------------*/
+.contact{
+  width: 100%;
+  min-height: 480px;
+  height: auto;
+
+  form{
+    padding: 20px 40px;
+    @media screen and (max-width: 767px) {
+      padding: 20px 20px;
+    }
+    button{
+      width: 150px;
+      top: 20px;
+      margin-bottom: 25px;
+      i{
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .progress {
+    position: relative;
+    height: 3px;
+    display: block;
+    width: 100%;
+    background-color: $primary-color;
+    border-radius: 0;
+    margin: 0;
+    top: 0;
+  }
+  .is-hidden{
+    visibility: hidden;
+  }
+
+  /* Snackbar
+  -------------------------------------------------*/
+  #snackbar, #fail-snackbar {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -150px;
+    font-weight: $font-weight-light;
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+  }
+
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  .show {
+    visibility: visible !important;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+}
+
+/*---------------LOCATION MAP-------------------*/
+#google-map{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  #map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  #cd-zoom-in, #cd-zoom-out {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin-left: 50px;
+    background-color: $accent-color;
+    background-repeat: no-repeat;
+    background-size: 32px 64px;
+    i{
+      color: #ffffff;
+      font-size: 20px;
+      padding: 6px 6px;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  .no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
+    background-color: $accent-color;
+  }
+  #cd-zoom-in {
+    background-position: 50% 0;
+    margin-top: 50px;
+    margin-bottom: 1px;
+  }
+  #cd-zoom-out {
+    background-position: 50% -32px;
+  }
+  address {
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    top: 350px;
+    left: 0;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    font-size: 1.1em;
+    line-height: 30px;
+    font-weight: $font-weight-light;
+    box-shadow: $card-box-shadow;
+    margin-bottom: 50px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #google-map{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    box-shadow: $card-box-shadow;
+    #map-container {
+      height: 300px;
+    }
+    address {
+      top: 250px;
+    }
+    #cd-zoom-in, #cd-zoom-out {
+      margin-left: 20px;
+    }
+    #cd-zoom-in {
+      margin-top: 20px;
+    }
+    #back-to-top{
+      right: 20px;
+    }
+  }
+}
+
+

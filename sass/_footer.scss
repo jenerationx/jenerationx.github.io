@@ -1,0 +1,15 @@
+@import "variables";
+
+/*---------------FOOTER-------------------*/
+footer{
+  width: 100%;
+  margin-top: 40px;
+  height: auto;
+  background-color: #ffffff;
+  color: #ffffff;
+  box-shadow: $card-box-shadow;
+  p{
+    margin: 10px 0;
+    line-height: 30px;
+  }
+}

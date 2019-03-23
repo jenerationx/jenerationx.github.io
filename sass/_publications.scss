@@ -1,0 +1,62 @@
+@import "variables";
+
+#publications{
+  .publication{
+    padding: 30px 20px;
+    margin-top: 60px;
+
+    .icon-div{
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      top: -35px;
+      left: 50%;
+      margin-left: -35px;
+      border-radius: 50%;
+      background-color: $primary-color;
+
+      i{
+        color: #ffffff;
+        font-size: 30px;
+        vertical-align: middle;
+        line-height: 70px;
+      }
+    }
+
+    h6{
+      margin: 0;
+      line-height: 1.4;
+      font-size: 1.25em;
+      font-weight: $font-weight-normal;
+      color: $font-color-dark;
+      padding: 25px 20px 15px 20px;
+      border-bottom: 1px solid $divider-color;
+    }
+
+    ul{
+      margin: 20px 0 0 0;
+
+      li{
+        margin-bottom: 10px;
+        margin-right: 20px;
+
+        i{
+          color: $primary-color;
+          font-size: 20px;
+          vertical-align: middle;
+          margin-right: 10px;;
+        }
+      }
+    }
+
+    p{
+      margin: 10px 0;
+    }
+
+    .btn{
+      margin-top: 20px;
+    }
+
+  }
+}
+

@@ -1,0 +1,90 @@
+@import "variables";
+
+.full-post{
+  padding-bottom: 30px;
+  &:hover{
+    box-shadow: $card-box-shadow;
+  }
+  .full-post-p{
+     margin-top: 15px;
+     padding: 0;
+  }
+
+  .post-title{
+    h5{
+      margin: 0;
+      line-height: 1.5;
+      font-size: 2em;
+      font-weight: $font-weight-normal;
+      color: $font-color-dark;
+      padding: 20px 0;
+    }
+  }
+
+  .post-subtitle{
+    margin: 10px 0 -10px 0;
+    line-height: 1.5;
+    font-size: 1.25em;
+    font-weight: $font-weight-normal;
+    color: $font-color-dark;
+  }
+
+  .post-list{
+    margin-top: 15px;
+    padding-left: 15px;
+    li{
+      list-style: circle;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  .tags{
+    padding-left: 20px;
+    i{
+      font-size: 25px;
+      padding-top: 5px;
+      vertical-align: middle;
+    }
+    span{
+      font-weight: $font-weight-normal;
+      font-size: 1em;
+      margin-left: 20px;
+    }
+  }
+
+}
+
+.comment-box, .posted-comment{
+  padding: 20px 20px;
+  font-weight: $font-weight-light;
+  color: $font-color-dark;
+  height: auto;
+  h6{
+    font-weight: $font-weight-normal;
+    color: $font-color-dark;
+  }
+}
+
+.posted-comment{
+  .media-body{
+    padding-left: 10px;
+    span{
+      font-weight: $font-weight-light;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    .comment-icons{
+      li{
+        margin-right: 10px;
+        i{
+          color: $font-color-dark;
+          font-size: 20px;
+
+          &:hover{
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}

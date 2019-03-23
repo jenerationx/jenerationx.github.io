@@ -1,0 +1,98 @@
+@import "variables";
+
+/*---------------PORTFOLIO-------------------*/
+
+#portfolios{
+  width: 100%;
+  height: auto;
+
+  ul{
+    li{
+      color: $primary-color;
+      cursor: pointer;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 10px 10px;
+      a{
+        color: $primary-color;
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+
+  .filtr-container{
+    width: 100%;
+
+    .portfolio{
+      width: 100%;
+      position: relative;
+
+      &:hover{
+        box-shadow: $hover-box-shadow;
+      }
+
+      img{
+        width: 100%;
+        height: auto;
+        -webkit-transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        transition: 0.5s ease 0s;
+      }
+      figure {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        cursor: pointer;
+        figcaption {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          left: 0;
+          height: 100%;
+          padding: 20px;
+          text-align: center;
+          font-weight: $font-weight-normal;
+          color: #ffffff;
+          span{
+            position: absolute;
+            width: 200px;
+            margin-left: -100px;
+            left: 50%;
+            top: 50%;
+          }
+        }
+        &.hover-effect {
+          figcaption {
+            background: rgba($primary-color, 0.5);
+            opacity: 0;
+            -webkit-transition: 1s ease 0.15s;
+            -moz-transition: 1s ease 0.15s;
+            -o-transition: 1s ease 0.15s;
+            transition: 1s ease 0.15s;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &:hover {
+            img {
+              -webkit-transform: scale3d(1.2, 1.2, 1.5);
+              -moz-transform: scale3d(1.2, 1.2, 1.5);
+              transform: scale3d(1.3, 1.3, 1);
+            }
+          }
+        }
+      }
+      h6{
+        line-height: 30px;
+        padding: 10px 10px;
+        padding-bottom: 20px;
+        font-size: 1.2em;
+        font-weight: $font-weight-normal;
+        color: $font-color-dark;
+      }
+    }
+  }
+}
