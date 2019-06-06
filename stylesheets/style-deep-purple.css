@@ -159,6 +159,7 @@ p, blockquote {
   color: #606060;
   font-weight: 300; }
 
+
 /*---------------COMPONENTS--------------*/
 .shadow {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15), 0 3px 10px 0 rgba(0, 0, 0, 0.15); }
@@ -680,6 +681,7 @@ a {
     width: 100%; }
     #portfolios .filtr-container .portfolio {
       width: 100%;
+      height: 235px;
       position: relative; }
       #portfolios .filtr-container .portfolio:hover {
         box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.16), 0 10px 15px 0 rgba(0, 0, 0, 0.12); }
